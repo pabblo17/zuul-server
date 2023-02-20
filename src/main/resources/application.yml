@@ -8,10 +8,12 @@ eureka:
   instance:
     preferIpAddress: true
     hostname: ${EUREKA_HOST:https://unir-eureka.herokuapp.com}
+    #hostname: ${EUREKA_HOST:http://localhost:8761}
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
+      #defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
       defaultZone: ${EUREKA_URL:https://unir-eureka.herokuapp.com/eureka}
       
       
